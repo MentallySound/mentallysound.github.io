@@ -1,8 +1,7 @@
 ---
 layout: home
 ---
-##
- Sorry for the inconvenience, still currently under construction!
+## Sorry for the inconvenience, still currently under construction!
 
 # Hi, I'm Vince!
 60 x 0.3 years old. Located in NSW, Australia.
