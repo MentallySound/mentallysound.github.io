@@ -2,8 +2,6 @@
 layout: home
 ---
 
-# Sorry for the inconvenience, still currently under construction!
-
 # Hi, I'm Vince!
 60 x 0.3 years old. Located in NSW, Australia.
 I am a maker/creator, Self Improvement Advocate, and health, faith and nature enthusiast!
