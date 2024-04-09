@@ -103,7 +103,6 @@
 			else if (id == "knowledge")
 				window.open("https://example.com", '_blank').focus();
 			
-
 		}
 	</script>
 
