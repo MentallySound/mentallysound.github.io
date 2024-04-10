@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+	<!-- Google Font -->
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&display=swap" rel="stylesheet">
+
+	<!-------->
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+
+		.navMenu {
+			font-family: "Martian Mono", monospace;
+			padding: 8px;
+			text-align: center;
+			margin: 4px auto;
+			width: 170px;
+		}
+
+		.navMenu a {
+			color: #272727;
+			text-decoration: none;
+			text-transform: uppercase;
+			display: inline-block;
+			padding: 6px;
+		}
+
+		.background {
+			background-color: #ece5f0;
+		}
+
+		.border {
+			border: 1px solid #cccccc;
+
+		}
+
+		.navMenu a:hover {
+
+			color: #d09c0b;
+		}
+	</style>
+</head>
+
+<body>
+
+	<nav class="navMenu  border">
+		<a id="home" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-house"></i> Home</a>
+		<a id="morning" onclick="navigate(this.id)" href="#"> <i class="fa-solid  fa-coffee"></i> Morning</a>
+		<a id="laboratory" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-flask"></i> Laboratory</a>
+		<a id="journal" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-book-bookmark"></i> Journal</a>
+		<a id="resonance" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-hard-drive"></i> Resonance</a>
+		<a id="storage" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-database"></i> Storage</a>
+		<a id="habit" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-atom"></i> Consistency</a>
+		<
+
+
+
+	</nav>
+
+
+	<script>
+
+		let direction = "vertical";
+		if (direction === "vertical") {
+			document.head.insertAdjacentHTML("beforeend", `<style>.navMenu a {display: block; text-align:left; margin:5px} i{width:7px; margin-right:5px} .navMenu{margin:3px}</style>`)
+		}
+
+
+		function navigate(id) {
+
+			if (id == 'home')
+				window.open("https://www.notion.so/vincenthopf/Inside-out-abbdbccdc0914424b64071bae74bdfc3?pvs=4", '_blank').focus();
+			else if (id == "morning")
+				window.open("https://www.notion.so/vincenthopf/Wake-N-Dump-df91647392164f0db218f71b5a5918f6?pvs=4", '_blank').focus();
+			else if (id == "laboratory")
+				window.open("https://www.notion.so/vincenthopf/Laboratory-0403a317e44a40cf8897b6236281444c?pvs=4", '_blank').focus();
+			else if (id == "journal")
+				window.open("https://www.notion.so/vincenthopf/Journal-d5d1ad4e408945989cce9f463e705feb?pvs=4", '_blank').focus();
+			else if (id == "resonance")
+				window.open("https://www.notion.so/vincenthopf/89353e56a66e4c38a7e2c8639b5a94b4?v=3e220299abca451e921305e9d35a189d&pvs=4", '_blank').focus();
+			else if (id == "storage")
+				window.open("https://www.notion.so/vincenthopf/Storage-32f73273dcf941ffba2ce5d93547a9b2?pvs=4", '_blank').focus();
+			else if (id == "habit")
+				window.open("https://www.notion.so/vincenthopf/Habit-Tracker-36ba84457de24f8d8cbd2645bb454a66?pvs=4", '_blank').focus();
+			
+		}
+	</script>
+
+
+</body>
+
+</html>
