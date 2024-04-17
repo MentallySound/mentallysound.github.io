@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote</title>
+
+    <style>
+
+        .widget {
+            padding: 5px 5px ;
+            color: #000000;
+            text-align: center;
+                max-width: 95%;
+            margin: auto;
+            font-family: Arial, Helvetica, sans-serif;
+            font-variant-caps: normal;
+            font-size: 2em;
+
+        }
+
+        div {
+             width: 95%;
+             min-height: 100px;
+
+            background:
+                linear-gradient(to right, black 4px, transparent 4px) 0 0,
+                linear-gradient(to right, black 4px, transparent 4px) 0 100%,
+                linear-gradient(to left, black 4px, transparent 4px) 100% 0,
+                linear-gradient(to left, black 4px, transparent 4px) 100% 100%,
+                linear-gradient(to bottom, black 4px, transparent 4px) 0 0,
+                linear-gradient(to bottom, black 4px, transparent 4px) 100% 0,
+                linear-gradient(to top, black 4px, transparent 4px) 0 100%,
+                linear-gradient(to top, black 4px, transparent 4px) 100% 100%;
+
+            background-repeat: no-repeat;
+            background-size: 20px 20px;
+}
+
+     
+    </style>
+</head>
+<body>
+
+    <div class="widget" id="widget"></div>
+
+
+<script>
+
+quotes=[
+"Anger is like drinking poison and hoping the other person dies. - Unknown",
+
+"Give me six hours to chop down a tree, and I will spend the first four sharpening the axe. - Abraham Lincoln",
+
+"To define is to limit. - Oscar Wilde",
+
+"Simplicity is the ultimate sophistication. - Leonardo DaVinci",
+
+"When everyone is sick we no longer consider it a disease. - Naval Ravikant",
+
+"A cornered dog bites twice as hard. - Milos Vuskovic",
+
+"If sleep wasnt a normal thing, it would be a banned substance. - Matt Fraser",
+
+"To be old and wise, you must first be young and stupid. - Kira Evsanaa",
+
+"We need to be reminded more than we need to be taught. - Unknown",
+
+"Energy cannot be destroyed, it can only be converted. - Unknown",
+
+"If youre bored, build. If youre anxious, focus. Youre bored because you have nothing meaningful to build. Youre anxious because youre focusing on the building, not the brick. - Dan Koe",
+
+"The only person crazier than a crazy person is a sane person that tries to understand them. - Alex Hormozi",
+
+"Do no harm, take no shit. - Alex Hormozi",
+
+"Social media made you all way too comfortable with disrespecting people and not getting punched in the face for it. - Mike Tyson",
+
+"A mistake doing what feels right is a mistake worth making. - Unknown",
+
+"I hear and I forget, I see and I remember, I do and I understand. - Confucius",
+
+"By becoming interested in the cause, we are less likely to dislike the effect. - Dale Carnegie",
+
+"A minute of planning saves you ten minutes. - Brian Tracy",
+
+"Give a dog a bad name and you may as well hang him. - Dale Carnegie",
+
+"The point is not to memorise, the point is to understand. - Richard Feynman",
+
+"I dont do drugs, I am drugs. - Salvador Dali",
+
+"He who said money cant buy happiness hasnt given enough away. - Unknown",
+
+"Your nervous system cannot tell the difference between a real experience and one that is vividly imagined. - Maxwell Maltz",
+
+"The heaviest thing in the world to carry around isnt iron or gold, its an unmade decision. - Alex Hormozi",
+
+"Im not interested in anything thats not sustainable—not friendships, not investing strategies, not career. If I cant do it forever, Im not interested in it. - Morgan Housel",
+
+"Facts Tell, Stories Sell. - Bryan Eisenberg",
+
+"Theyre playing not to lose, but if you want to play to win, you have to take different bets. - Alex Hormozi",
+
+"Beware the words of those whose pockets aligned for their tongues may dance with deceit. - Unknown",
+
+"Money loves speed. Wealth loves time. Poverty loves indecision. - Alex Hormozi",
+
+"A plane defies gravity with speed. - Andrew Tate",
+
+"As hard as you work for your money, there are people working just as hard (if not harder) to take it from you. - Dr. Dre",
+
+"The best way to stay poor is to listen to poor people on how to get rich. - Alex Hormozi",
+
+"A man is judged by the smallest thing that provokes him/A man is judged by the size of his problems. - Unknown",
+
+"Everything must be hard before it can be easy. - Unknown",
+
+"Success is paid for in advance. - Brian Tracy",
+
+"Skill exposes you to more opportunities to get lucky. - Alex Hormozi",
+
+"Apply specific knowledge with leverage and eventually, you will get what you deserve. - Naval Ravikant",
+
+"Without hard work, youll develop neither judgement nor leverage. - Naval Ravikant",
+
+"Customer expectations are fickle. Thats why we set the expectations for them. And if we set those expectations, then we can exceed them. - Alex Hormozi",
+
+"A salary is a drug your employer gives you to forget your dreams. - Unknown",
+
+"Find a spouse that doesnt make you feel guilty for working. Cheerleaders dont ask quarterbacks to leave the game when the games on the line. - Alex Hormozi",
+
+"95% of your success in life is directly correlated to the people you spend the most time with. - David McClelland",
+
+"People want you to do well, but not better than them. - Alex Hormozi",
+
+"Treat her like a celebrity and shell treat you like a fan. - Unknown",
+
+"If you had to create a human…what would you put them through to make them tough? Least likely answer: a chill life. - Alex Hormozi",
+
+"Rome wasnt built in a day. - John Heywood",
+
+"Youre not just laying bricks, youre building a cathedral. - Stefan Aarnio",
+
+"The bigger the monster, the more epic the hero. - Alex Hormozi",
+
+"You can get whatever you want in life, just not whenever you want it. Delay gratification. - Alex Hormozi",
+
+"Strong, Hard people dont come from easy times. - Alex Hormozi",
+
+"The thing they dont tell you is: The long way is the shortcut. Because the shortcut never gets you there. - Alex Hormozi",
+
+"Youre not what happened to you. You are what you choose to become. - Unknown",
+
+"We must all suffer from one of two pains: the pain of discipline or the pain of regret. - Jim Rohn",
+
+"A smooth sea never made a skilled sailor. - Franklin D. Roosevelt",
+
+"The self-image is the key to human personality and human behavior. Change the self image and you change the personality and the behavior. - Maxwell Maltz",
+
+"You dont become confident by shouting affirmations in the mirror, but by having a stack of undeniable proof that you are who you say you are. Outwork your self-doubt. - Alex Hormozi",
+
+"You earn your own respect by keeping the promises you make to yourself. - Leila Hormozi",
+
+"Every time we exercise self control, we gain self respect, and every time we gain self respect, we gain self esteem. - Sadia Psychology",
+
+"Dont hide your delicate pride from the truth. - Jocko Willink",
+];
+
+const INTERVAL = 86400000;
+
+function dispalyQuote(){
+
+    document.getElementById('widget').innerHTML =quotes[0];
+    quotes.forEach((quote, i) => {
+        setTimeout(() => {
+            document.getElementById('widget').innerHTML =quote;
+        }, i * INTERVAL);  
+    });
+    }
+
+    function dispalyWidget() {
+        dispalyQuote();
+        setTimeout(dispalyWidget, quotes.length*INTERVAL);
+    }
+    dispalyWidget()
+
+</script>
+
+</body>
+</html>
